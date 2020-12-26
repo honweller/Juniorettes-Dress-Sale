@@ -1,4 +1,5 @@
-import csv 
+import csv
+import os.path
 
 images = []
 
@@ -6,6 +7,7 @@ with open('dress sale.csv', 'r') as dress_file:
     reader = csv.reader(dress_file)
     for row in reader:
         img, id, price, size = row
+        assert(os.path.isfile(f"images/{img}"))
         images.append(
             '\n'.join(["<div class='dress-entry'>",
             f"<img src='images/{img}'/>",
