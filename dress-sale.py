@@ -10,7 +10,7 @@ with open('dress sale.csv', 'r') as dress_file:
         assert(os.path.isfile(f"images/{img}"))
         images.append(
             '\n'.join(["<div class='dress-entry'>",
-            f"<img src='images/{img}'/>",
+            f"<img loading='lazy' src='images/{img}'/>",
             "<div class='dress-description'>",
             f"<p class='id'>Dress Number: {id}</p>",
             f"<p class='price'>Price: {price}</p>",
